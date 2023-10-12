@@ -1,6 +1,6 @@
 -- Write a SQL script that creates a stored procedure ComputeAverageScoreForUse
 -- r that computes and store the average score for a student. Note: An average score can be a decimal
-DELIMITER //
+DELIMITER $$;
 
 CREATE PROCEDURE ComputeAverageScoreForUser(IN user_id INT)
 BEGIN
@@ -17,7 +17,7 @@ BEGIN
     VALUES (user_id, avg_score)
     ON DUPLICATE KEY UPDATE average_score = avg_score;
 
-END //
+END; $$
 
 DELIMITER ;
 

@@ -1,5 +1,4 @@
--- Write a SQL script that creates a stored procedure ComputeAverageWeightedScoreForUser
-DELIMITER //
+-- Write a SQL script that creates a stored procedure ComputeAverage
 
 CREATE PROCEDURE ComputeAverageWeightedScoreForUser(IN user_id INT)
 BEGIN
@@ -16,7 +15,5 @@ BEGIN
     VALUES (user_id, weighted_avg)
     ON DUPLICATE KEY UPDATE weighted_average_score = weighted_avg;
 
-END //
-
-DELIMITER ;
+END ;
 
